@@ -78,20 +78,14 @@ for train_index, val_index in kf.split(samples):
         new_adj_matrix[i[0], i[1], i[2]] = 0
 
     # K近邻形成图
-    drug_graph = k_matrix(disease_similarity_matrix, 30)
+    drug_graph = k_matrix(drug_similarity_matrix, 30)
     disease_graph = k_matrix(disease_similarity_matrix, 30)
     target_graph = k_matrix(target_similarity_matrix, 30)
 
     # 初始化特征从三维邻接矩阵中获取
-    X_drug = np.zeros((124, 177, 104), dtype=int)
-    X_disease = np.zeros((177, 124, 104), dtype=int)
-    X_target = np.zeros((104, 124, 177), dtype=int)
-    for i in range(124):
-        X_drug[i] = adj_matrix[i, :, :]
-    for j in range(177):
-        X_disease[j] = adj_matrix[:, j, :]
-    for k in range(104):
-        X_target[k] = adj_matrix[:, :, k]
+    X_drug = new_adj_matrix.copy()
+    X_disease = new_adj_matrix.transpose(1, 0, 2)
+    X_target = new_adj_matrix.transpose(2, 0, 1)
 
     # 将输入数据集转化为tensor
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -110,9 +104,9 @@ for train_index, val_index in kf.split(samples):
     conv_type = "GCN"
     initial_type = "random"
     if initial_type == "random_generate":
-        drug_ini_x = torch.randn(124, 124, dtype=torch.float32, device=device)
-        disease_ini_x = torch.randn(177, 177, dtype=torch.float32, device=device)
-        target_ini_x = torch.randn(104, 104, dtype=torch.float32, device=device)
+        drug_ini_x = torch.randn(124, 177, 104, dtype=torch.float32, device=device)
+        disease_ini_x = torch.randn(177, 124, 104, dtype=torch.float32, device=device)
+        target_ini_x = torch.randn(104, 124, 177, dtype=torch.float32, device=device)
     elif initial_type == "random_walk":
         drug_ini_x = drug_x_device
         disease_ini_x = disease_x_device
