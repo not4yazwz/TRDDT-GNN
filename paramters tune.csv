@@ -1,0 +1,20 @@
+1、KNN_nums:30 epoch:1000  hidden_dimension: 32
+auc:0.9311,aupr:0.9486,f1_score:0.8987,accuracy:0.9008,recall:0.8815,specificity:0.9208,precision:0.9178
+
+2、KNN_nums:30 epoch:1000  hidden_dimension: 64
+auc:0.9334,aupr:0.9523,f1_score:0.8979,accuracy:0.9001,recall:0.8792,specificity:0.9211,precision:0.9180
+
+3、KNN_nums:30 epoch:1000  hidden_dimension: 128
+auc:0.9396,aupr:0.9565,f1_score:0.9097,accuracy:0.9115,recall:0.8916,specificity:0.9317,precision:0.9288
+
+4、KNN_nums:30 epoch:1000  hidden_dimension: 256
+auc:0.9390,aupr:0.9558,f1_score:0.9132,accuracy:0.9143,recall:0.9033,specificity:0.9260,precision:0.9237
+
+5、KNN_nums:30 epoch:500  hidden_dimension: 128
+auc:0.9357,aupr:0.9521,f1_score:0.9045,accuracy:0.9060,recall:0.8891,specificity:0.9234,precision:0.9207
+
+6、KNN_nums:20 epoch:1000  hidden_dimension: 128
+auc:0.9385,aupr:0.9555,f1_score:0.9050,accuracy:0.9067,recall:0.8904,specificity:0.9238,precision:0.9207
+
+6、KNN_nums:40 epoch:1000  hidden_dimension: 128
+auc:0.9390,aupr:0.9556,f1_score:0.9104,accuracy:0.9122,recall:0.8945,specificity:0.9307,precision:0.9278

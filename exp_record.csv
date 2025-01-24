@@ -1,0 +1,59 @@
+1、特征：三维截面  GNN：两层GCN  相似网络：未使用GIP
+结果：
+fold_1-auc:0.9637,aupr:0.9769,f1_score:0.9408,accuracy:0.9396,recall:0.9360,specificity:0.9433,precision:0.9456
+fold_2-auc:0.9519,aupr:0.9624,f1_score:0.9228,accuracy:0.9257,recall:0.9081,specificity:0.9426,precision:0.9380
+fold_3-auc:0.9679,aupr:0.9710,f1_score:0.9338,accuracy:0.9361,recall:0.9388,specificity:0.9336,precision:0.9288
+fold_4-auc:0.9534,aupr:0.9671,f1_score:0.9256,accuracy:0.9223,recall:0.9241,specificity:0.9203,precision:0.9272
+fold_5-auc:0.9605,aupr:0.9698,f1_score:0.9262,accuracy:0.9256,recall:0.9441,specificity:0.9075,precision:0.9091
+auc:0.9595,aupr:0.9695,f1_score:0.9299,accuracy:0.9299,recall:0.9302,specificity:0.9294,precision:0.9297
+
+2、特征：三维截面  GNN：两层GAT  相似网络：未使用GIP
+结果：
+fold_1-auc:0.9745,aupr:0.9846,f1_score:0.9522,accuracy:0.9516,recall:0.9394,specificity:0.9645,precision:0.9654
+fold_2-auc:0.9471,aupr:0.9563,f1_score:0.9140,accuracy:0.9171,recall:0.9011,specificity:0.9324,precision:0.9273
+fold_3-auc:0.9664,aupr:0.9723,f1_score:0.9288,accuracy:0.9309,recall:0.9388,specificity:0.9236,precision:0.9190
+fold_4-auc:0.9581,aupr:0.9704,f1_score:0.9262,accuracy:0.9240,recall:0.9109,specificity:0.9384,precision:0.9420
+fold_5-auc:0.9503,aupr:0.9687,f1_score:0.9231,accuracy:0.9239,recall:0.9231,specificity:0.9247,precision:0.9231
+auc:0.9593,aupr:0.9704,f1_score:0.9289,accuracy:0.9295,recall:0.9227,specificity:0.9367,precision:0.9353
+
+3、特征：随机生成  GNN：两层GAT  相似网络：未使用GIP
+结果：*(随即特征结果为随即预测，证明特征有效)
+fold_1-auc:0.5000,aupr:0.7565,f1_score:0.6781,accuracy:0.5130,recall:1.0000,specificity:0.0000,precision:0.5130
+
+4、特征：随机游走  GNN：两层GAT  相似网络：未使用GIP
+结果：对比特征
+
+5、特征：三维截面  GNN：两层GCN  相似网络：未使用GIP KNN 邻居数量：30 -> 20
+结果：
+fold_1-auc:0.9458,aupr:0.9672,f1_score:0.9260,accuracy:0.9257,recall:0.9057,specificity:0.9468,precision:0.9472
+fold_2-auc:0.9307,aupr:0.9342,f1_score:0.9028,accuracy:0.9033,recall:0.9187,specificity:0.8885,precision:0.8874
+fold_3-auc:0.9495,aupr:0.9609,f1_score:0.9159,accuracy:0.9188,recall:0.9209,specificity:0.9169,precision:0.9110
+fold_4-auc:0.9373,aupr:0.9579,f1_score:0.9046,accuracy:0.8998,recall:0.9076,specificity:0.8913,precision:0.9016
+fold_5-auc:0.9314,aupr:0.9564,f1_score:0.8968,accuracy:0.8997,recall:0.8811,specificity:0.9178,precision:0.9130
+auc:0.9389,aupr:0.9553,f1_score:0.9092,accuracy:0.9095,recall:0.9068,specificity:0.9123,precision:0.9121
+
+6、特征：三维截面  GNN：两层GAT 相似网络：未使用GIP KNN 邻居数量：30 -> 20
+结果：
+fold_1-auc:0.9417,aupr:0.9661,f1_score:0.9241,accuracy:0.9240,recall:0.9024,specificity:0.9468,precision:0.9470
+fold_2-auc:0.9228,aupr:0.9438,f1_score:0.8861,accuracy:0.8912,recall:0.8657,specificity:0.9155,precision:0.9074
+fold_3-auc:0.9462,aupr:0.9590,f1_score:0.9094,accuracy:0.9136,recall:0.9029,specificity:0.9236,precision:0.9161
+fold_4-auc:0.9347,aupr:0.9565,f1_score:0.9025,accuracy:0.8981,recall:0.9010,specificity:0.8949,precision:0.9040
+fold_5-auc:0.9414,aupr:0.9561,f1_score:0.8976,accuracy:0.8962,recall:0.9196,specificity:0.8733,precision:0.8767
+auc:0.9374,aupr:0.9563,f1_score:0.9039,accuracy:0.9046,recall:0.8983,specificity:0.9108,precision:0.9102
+
+7、特征：三维截面  GNN：(两层GAT + 多头注意力) 相似网络：未使用GIP KNN 邻居数量：30 -> 20
+结果：*(pass 下降明显 auc低于90)
+
+
+fold_1-auc:0.9156,aupr:0.9378,f1_score:0.8909,accuracy:0.8946,recall:0.8586,specificity:0.9308,precision:0.9257
+fold_2-auc:0.9545,aupr:0.9679,f1_score:0.9242,accuracy:0.9257,recall:0.9034,specificity:0.9481,precision:0.9458
+fold_3-auc:0.9228,aupr:0.9476,f1_score:0.8967,accuracy:0.8981,recall:0.8858,specificity:0.9103,precision:0.9078
+fold_4-auc:0.9374,aupr:0.9529,f1_score:0.9100,accuracy:0.9102,recall:0.9100,specificity:0.9103,precision:0.9100
+fold_5-auc:0.9422,aupr:0.9595,f1_score:0.9066,accuracy:0.9066,recall:0.9066,specificity:0.9066,precision:0.9066
+auc:0.9345,aupr:0.9531,f1_score:0.9057,accuracy:0.9070,recall:0.8929,specificity:0.9212,precision:0.9192
+
+FeedForward
+auc:0.8792,aupr:0.9110,f1_score:0.8594,accuracy:0.8656,recall:0.8224,specificity:0.9088,precision:0.9006
+
+GAT
+auc:0.9029,aupr:0.9304,f1_score:0.8789,accuracy:0.8818,recall:0.8563,specificity:0.9074,precision:0.9038
