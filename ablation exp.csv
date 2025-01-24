@@ -1,8 +1,0 @@
-1、Only use GIP to construct sim net
-auc:0.9405,aupr:0.9550,f1_score:0.9110,accuracy:0.9115,recall:0.9055,specificity:0.9179,precision:0.9169
-
-2、Only use origin sim to construct sim net
-auc:0.9401,aupr:0.9568,f1_score:0.9126,accuracy:0.9140,recall:0.9003,specificity:0.9277,precision:0.9254
-
-3、fuse GIP and origin sim to construct sim net
-auc:0.9390,aupr:0.9560,f1_score:0.9089,accuracy:0.9105,recall:0.8936,specificity:0.9277,precision:0.9248
