@@ -59,6 +59,5 @@ class GNNModel(torch.nn.Module):
 
         # 计算外积，生成融合特征矩阵 Z
         z = torch.einsum('ik,jk,lk->ijl', drug_x, disease_x, target_x)
-        z = torch.relu(z)
 
         return self.sigmoid(z)
